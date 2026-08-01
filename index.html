@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MINDSET_SYSTEM.exe</title>
+<title>REALITY_CORE.exe</title>
 
 <style>
 
@@ -14,76 +14,94 @@ box-sizing:border-box;
 }
 
 body{
+
 margin:0;
 min-height:100vh;
+background:#000;
+color:#00ff66;
+font-family:"Courier New",monospace;
 overflow-x:hidden;
-background:#050505;
-color:white;
-font-family:monospace;
+
 }
 
 
-/* Fondo hacker */
+/* Código cayendo */
 
-.codigo{
+.matrix{
 
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-color:#9b59ff;
-opacity:.18;
-font-size:14px;
-line-height:25px;
 overflow:hidden;
 z-index:0;
+color:#00ff66;
+opacity:.20;
+font-size:15px;
+line-height:25px;
 
 }
 
 
 
-/* Contenedor */
+/* Terminal */
 
-.contenedor{
+.container{
 
-position:relative;
-z-index:2;
 min-height:100vh;
 display:flex;
-justify-content:center;
 align-items:center;
-padding:25px 15px;
+justify-content:center;
+padding:20px;
+position:relative;
+z-index:2;
 
 }
 
 
 
-.sistema{
+.terminal{
 
 width:100%;
-max-width:520px;
-background:rgba(10,10,10,.95);
-border:2px solid #9b59ff;
-border-radius:20px;
+max-width:600px;
+background:#050505;
+border:1px solid #00ff66;
 padding:25px;
-box-shadow:0 0 30px #9b59ff;
-animation:entrada 2s;
+box-shadow:0 0 25px #00ff66;
 
 }
 
 
 
-h1{
+.header{
 
-text-align:center;
-color:#9b59ff;
-text-shadow:0 0 15px #9b59ff;
+border-bottom:1px solid #00ff66;
+padding-bottom:15px;
+margin-bottom:20px;
 
 }
 
 
-p{
+
+.title{
+
+font-size:22px;
+color:#00ff66;
+
+}
+
+
+
+.status{
+
+color:#aaa;
+
+}
+
+
+
+.text{
 
 font-size:16px;
 line-height:1.8;
@@ -94,23 +112,28 @@ line-height:1.8;
 
 button{
 
-display:block;
-margin:20px auto;
-background:#9b59ff;
-color:white;
-border:none;
-padding:14px 30px;
-border-radius:30px;
+background:transparent;
+border:1px solid #00ff66;
+color:#00ff66;
+padding:12px 20px;
 font-family:monospace;
-font-size:16px;
 cursor:pointer;
-box-shadow:0 0 15px #9b59ff;
+margin-top:20px;
 
 }
 
 
 
-.reflexion{
+button:hover{
+
+background:#00ff66;
+color:black;
+
+}
+
+
+
+.file{
 
 display:none;
 
@@ -121,27 +144,23 @@ display:none;
 .final{
 
 text-align:center;
-color:#9b59ff;
-font-size:19px;
+margin-top:30px;
+color:#00ff66;
 
 }
 
 
+.cursor{
 
-@keyframes entrada{
+animation:blink 1s infinite;
 
-from{
+}
 
+
+@keyframes blink{
+
+50%{
 opacity:0;
-transform:scale(.7);
-
-}
-
-to{
-
-opacity:1;
-transform:scale(1);
-
 }
 
 }
@@ -155,132 +174,153 @@ transform:scale(1);
 <body>
 
 
+<div class="matrix">
 
-<div class="codigo">
-
-MINDSET_SYSTEM.exe
+01010101 01001110 01001100
 <br>
-LOADING MENTALITY...
+REALITY_CORE ONLINE
 <br>
-ACCESS GRANTED...
+10101010 00101010 111000
 <br>
-NO ENVY
+MINDSET ACTIVE
 <br>
-NO LIMITS
-<br>
-STAY ORIGINAL
-<br>
-KEEP MOVING
-<br>
-01001101 01000101 01001110 01010100 01000101
+01010101 10101010
 <br>
 
 </div>
 
 
 
-<div class="contenedor">
+<div class="container">
 
 
-<div class="sistema">
+<div class="terminal">
 
 
-<h1>
-MINDSET_SYSTEM.exe 🖤
-</h1>
+<div class="header">
+
+<div class="title">
+
+REALITY_CORE v1.0
+
+</div>
+
+
+<div class="status">
+
+STATUS: SYSTEM ONLINE ✓
+
+</div>
+
+</div>
 
 
 
-<p>
+<div class="text">
 
-> Iniciando sistema...
+
+> Iniciando conexión...
+
 <br>
-> Cargando reflexión...
+
+> Analizando pensamientos...
+
 <br>
-> Preparando mensaje para quien necesita leerlo...
 
-</p>
+> Buscando archivo interno...
+
+<br>
+
+> Archivo encontrado:
+
+<br><br>
+
+[ REALIDAD.txt ]
+
+<br>
+
+
+<span class="cursor">_</span>
+
+
+</div>
 
 
 
-<button onclick="abrir()">
+<button onclick="abrirArchivo()">
 
-Ejecutar reflexión.exe ⚡
+[ ABRIR ARCHIVO ]
 
 </button>
 
 
 
-<div class="reflexion" id="reflexion">
+
+<div class="file" id="archivo">
 
 
-<p>
-
-A veces uno pierde demasiado tiempo mirando lo que dicen los demás,
-cuando la verdadera competencia siempre ha sido con uno mismo.
-
-</p>
+<div class="text">
 
 
-<p>
+<br>
 
-No todo comentario merece una respuesta.
-Hay personas que intentan apagar lo que otros hacen porque no soportan
-ver a alguien avanzar.
-
-</p>
-
-
-<p>
-
-No necesitas llamar la atención para demostrar tu valor.
-Ser diferente, tener tu propia forma de pensar y mantener tu esencia
-vale más que intentar encajar para agradar a todos.
-
-</p>
-
-
-<p>
-
-Las malas vibras siempre van a existir, pero tú decides si las cargas
-o sigues caminando hacia donde quieres llegar.
-
-</p>
-
-
-<p>
-
-La gente puede hablar, criticar o dudar, pero tus acciones con el tiempo
-terminan diciendo más que cualquier palabra.
-
-</p>
-
-
-<p>
-
-No cambies quién eres por la opinión de alguien más.
-Mejora, aprende y sigue creciendo sin perder tu esencia.
-
-</p>
-
-
-
-<p class="final">
-
-Sigue siendo original. 🖤
+> FILE: REALIDAD.txt
 
 <br><br>
 
-Tu camino no necesita la aprobación de todos.
 
-</p>
+A veces uno se preocupa demasiado por lo que dicen los demás,
+pero la verdad es que no todas las opiniones merecen nuestra energía.
+
+<br><br>
+
+La envidia siempre va a existir, las críticas siempre van a aparecer,
+pero eso no significa que tengamos que cambiar quiénes somos.
+
+<br><br>
+
+No necesitas llamar la atención para demostrar tu valor.
+Ser original, tener tu propia forma de pensar y seguir tu camino
+vale más que intentar ser aceptado por todos.
+
+<br><br>
+
+Las malas vibras pueden aparecer, pero está en uno decidir si las deja entrar
+o sigue avanzando sin perder su esencia.
+
+<br><br>
+
+Al final, las personas pueden hablar todo lo que quieran,
+pero tus acciones y tu crecimiento son los que terminan hablando por ti.
+
+<br><br>
+
+Nunca cambies tu forma de ser solo para encajar.
+Mejora, aprende y sigue adelante.
+
+<br><br>
 
 
+<div class="final">
+
+END OF FILE
+
+<br><br>
+
+KEEP YOUR MIND STRONG 🖤
 
 </div>
 
 
 </div>
+
+
+</div>
+
+
+
+</div>
+
 
 </div>
 
@@ -290,13 +330,14 @@ Tu camino no necesita la aprobación de todos.
 <script>
 
 
-function abrir(){
+function abrirArchivo(){
 
 document.querySelector("button").style.display="none";
 
-document.getElementById("reflexion").style.display="block";
+document.getElementById("archivo").style.display="block";
 
 }
+
 
 
 
@@ -304,54 +345,48 @@ const simbolos=[
 
 "01",
 "10",
-"⚡",
-"🖤",
-"★",
-"404",
-"∞"
+"0101",
+"█",
+">",
+"_",
+"404"
 
 ];
 
 
-for(let i=0;i<45;i++){
+for(let i=0;i<60;i++){
 
-let elemento=document.createElement("div");
+let s=document.createElement("div");
 
-elemento.innerHTML=
-simbolos[Math.floor(Math.random()*simbolos.length)];
+s.innerHTML=simbolos[Math.floor(Math.random()*simbolos.length)];
 
+s.style.position="fixed";
+s.style.top="-20px";
+s.style.left=Math.random()*100+"vw";
+s.style.color="#00ff66";
+s.style.fontSize=(12+Math.random()*20)+"px";
+s.style.zIndex="1";
 
-elemento.style.position="fixed";
-elemento.style.top="-30px";
-elemento.style.left=Math.random()*100+"vw";
-elemento.style.color="#9b59ff";
-elemento.style.fontSize=(15+Math.random()*20)+"px";
-elemento.style.zIndex="1";
-elemento.style.pointerEvents="none";
-
-
-document.body.appendChild(elemento);
+document.body.appendChild(s);
 
 
-
-elemento.animate(
+s.animate(
 
 [
+
 {
-transform:"translateY(0) rotate(0deg)",
-opacity:1
+transform:"translateY(0)"
 },
 
 {
-transform:"translateY(110vh) rotate(360deg)",
-opacity:0
+transform:"translateY(110vh)"
 }
 
 ],
 
 {
 
-duration:(5+Math.random()*7)*1000,
+duration:(4+Math.random()*6)*1000,
 iterations:Infinity,
 delay:Math.random()*5000
 
@@ -367,4 +402,4 @@ delay:Math.random()*5000
 
 
 </body>
-  </html>
+</html>
