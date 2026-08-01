@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>REALITY_CORE.exe</title>
+<title>MINDSET_SYSTEM.exe</title>
 
 <style>
 
@@ -14,18 +14,16 @@ box-sizing:border-box;
 }
 
 body{
-
 margin:0;
 min-height:100vh;
 background:#000;
 color:#00ff66;
 font-family:"Courier New",monospace;
 overflow-x:hidden;
-
 }
 
 
-/* Código cayendo */
+/* lluvia hacker */
 
 .matrix{
 
@@ -36,18 +34,16 @@ width:100%;
 height:100%;
 overflow:hidden;
 z-index:0;
-color:#00ff66;
-opacity:.20;
+opacity:.18;
 font-size:15px;
-line-height:25px;
 
 }
 
 
 
-/* Terminal */
+/* pantalla */
 
-.container{
+.contenedor{
 
 min-height:100vh;
 display:flex;
@@ -65,7 +61,7 @@ z-index:2;
 
 width:100%;
 max-width:600px;
-background:#050505;
+background:#020202;
 border:1px solid #00ff66;
 padding:25px;
 box-shadow:0 0 25px #00ff66;
@@ -74,37 +70,58 @@ box-shadow:0 0 25px #00ff66;
 
 
 
-.header{
+/* ventana */
 
-border-bottom:1px solid #00ff66;
-padding-bottom:15px;
+.top{
+
+border:1px solid #00ff66;
+padding:15px;
 margin-bottom:20px;
 
 }
 
 
 
-.title{
+.nombre{
 
 font-size:22px;
+
+}
+
+
+
+.linea{
+
 color:#00ff66;
+margin-top:10px;
 
 }
 
 
 
-.status{
+.barra{
 
-color:#aaa;
+margin-top:15px;
+border:1px solid #00ff66;
+padding:5px;
+
+}
+
+
+.progreso{
+
+width:100%;
+height:8px;
+background:#00ff66;
 
 }
 
 
 
-.text{
+.texto{
 
-font-size:16px;
 line-height:1.8;
+font-size:16px;
 
 }
 
@@ -112,13 +129,13 @@ line-height:1.8;
 
 button{
 
-background:transparent;
-border:1px solid #00ff66;
+margin-top:20px;
+background:#000;
 color:#00ff66;
+border:1px solid #00ff66;
 padding:12px 20px;
 font-family:monospace;
 cursor:pointer;
-margin-top:20px;
 
 }
 
@@ -127,13 +144,13 @@ margin-top:20px;
 button:hover{
 
 background:#00ff66;
-color:black;
+color:#000;
 
 }
 
 
 
-.file{
+.archivo{
 
 display:none;
 
@@ -145,19 +162,18 @@ display:none;
 
 text-align:center;
 margin-top:30px;
-color:#00ff66;
 
 }
 
 
 .cursor{
 
-animation:blink 1s infinite;
+animation:parpadeo 1s infinite;
 
 }
 
 
-@keyframes blink{
+@keyframes parpadeo{
 
 50%{
 opacity:0;
@@ -165,8 +181,8 @@ opacity:0;
 
 }
 
-
 </style>
+
 
 </head>
 
@@ -176,68 +192,90 @@ opacity:0;
 
 <div class="matrix">
 
-01010101 01001110 01001100
+010101 101010 00101
 <br>
-REALITY_CORE ONLINE
+MINDSET CORE ONLINE
 <br>
-10101010 00101010 111000
+101010101
 <br>
-MINDSET ACTIVE
+REALITY CHECK
 <br>
-01010101 10101010
+010101010
 <br>
 
 </div>
 
 
 
-<div class="container">
+<div class="contenedor">
 
 
 <div class="terminal">
 
 
-<div class="header">
 
-<div class="title">
+<div class="top">
 
-REALITY_CORE v1.0
+<div class="nombre">
 
-</div>
-
-
-<div class="status">
-
-STATUS: SYSTEM ONLINE ✓
-
-</div>
+MINDSET_SYSTEM v2.0
 
 </div>
 
 
+<div class="linea">
 
-<div class="text">
+┌ SYSTEM TERMINAL ┐
+
+</div>
 
 
-> Iniciando conexión...
+<div class="linea">
+
+STATUS: ONLINE ✓
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="texto">
+
+
+> SYSTEM BOOT...
 
 <br>
 
-> Analizando pensamientos...
+> Loading core...
 
 <br>
 
-> Buscando archivo interno...
+> Checking mindset database...
 
 <br>
 
-> Archivo encontrado:
+> Access granted...
 
 <br><br>
 
-[ REALIDAD.txt ]
+
+<div class="barra">
+
+[████████████] 100%
+
+</div>
+
 
 <br>
+
+> FILE FOUND:
+
+<br>
+
+REALIDAD.txt
 
 
 <span class="cursor">_</span>
@@ -247,69 +285,65 @@ STATUS: SYSTEM ONLINE ✓
 
 
 
-<button onclick="abrirArchivo()">
+<button onclick="abrir()">
 
-[ ABRIR ARCHIVO ]
+[ OPEN REALITY.txt ]
 
 </button>
 
 
 
 
-<div class="file" id="archivo">
+<div class="archivo" id="archivo">
 
 
-<div class="text">
+<div class="texto">
 
 
 <br>
 
-> FILE: REALIDAD.txt
+┌ FILE: REALIDAD.txt ┐
 
 <br><br>
 
 
 A veces uno se preocupa demasiado por lo que dicen los demás,
-pero la verdad es que no todas las opiniones merecen nuestra energía.
+pero no todas las opiniones merecen nuestra energía.
 
 <br><br>
 
-La envidia siempre va a existir, las críticas siempre van a aparecer,
-pero eso no significa que tengamos que cambiar quiénes somos.
+La envidia, las críticas y las malas vibras siempre van a existir,
+pero uno decide cuánto poder les da sobre su vida.
 
 <br><br>
 
-No necesitas llamar la atención para demostrar tu valor.
-Ser original, tener tu propia forma de pensar y seguir tu camino
-vale más que intentar ser aceptado por todos.
+No necesitas llamar la atención para demostrar quién eres.
+Ser original, pensar diferente y mantener tu esencia vale mucho más
+que intentar agradarle a todo el mundo.
 
 <br><br>
 
-Las malas vibras pueden aparecer, pero está en uno decidir si las deja entrar
-o sigue avanzando sin perder su esencia.
+Las personas pueden hablar, pueden juzgar o pueden dudar,
+pero al final tus acciones son las que muestran realmente quién eres.
 
 <br><br>
 
-Al final, las personas pueden hablar todo lo que quieran,
-pero tus acciones y tu crecimiento son los que terminan hablando por ti.
+Sigue avanzando sin perder tu forma de ser.
+Mejora, aprende y deja que tus resultados hablen por ti.
 
 <br><br>
 
-Nunca cambies tu forma de ser solo para encajar.
-Mejora, aprende y sigue adelante.
 
-<br><br>
+└ END OF FILE ┘
+
 
 
 <div class="final">
 
-END OF FILE
-
-<br><br>
-
 KEEP YOUR MIND STRONG 🖤
 
 </div>
+
 
 
 </div>
@@ -330,7 +364,7 @@ KEEP YOUR MIND STRONG 🖤
 <script>
 
 
-function abrirArchivo(){
+function abrir(){
 
 document.querySelector("button").style.display="none";
 
@@ -345,7 +379,9 @@ const simbolos=[
 
 "01",
 "10",
-"0101",
+"2026",
+"20",
+"26",
 "█",
 ">",
 "_",
@@ -356,24 +392,29 @@ const simbolos=[
 
 for(let i=0;i<60;i++){
 
-let s=document.createElement("div");
 
-s.innerHTML=simbolos[Math.floor(Math.random()*simbolos.length)];
-
-s.style.position="fixed";
-s.style.top="-20px";
-s.style.left=Math.random()*100+"vw";
-s.style.color="#00ff66";
-s.style.fontSize=(12+Math.random()*20)+"px";
-s.style.zIndex="1";
-
-document.body.appendChild(s);
+let elemento=document.createElement("div");
 
 
-s.animate(
+elemento.innerHTML=
+simbolos[Math.floor(Math.random()*simbolos.length)];
+
+
+elemento.style.position="fixed";
+elemento.style.top="-30px";
+elemento.style.left=Math.random()*100+"vw";
+elemento.style.color="#00ff66";
+elemento.style.fontSize=(12+Math.random()*20)+"px";
+elemento.style.zIndex="1";
+
+
+document.body.appendChild(elemento);
+
+
+
+elemento.animate(
 
 [
-
 {
 transform:"translateY(0)"
 },
