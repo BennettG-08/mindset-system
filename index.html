@@ -16,17 +16,16 @@ box-sizing:border-box;
 body{
 margin:0;
 min-height:100vh;
-background:#000;
-color:#00ff66;
+background:#050505;
+color:#9b59ff;
 font-family:"Courier New",monospace;
 overflow-x:hidden;
 }
 
 
-/* lluvia hacker */
+/* Código cayendo */
 
 .matrix{
-
 position:fixed;
 top:0;
 left:0;
@@ -36,15 +35,13 @@ overflow:hidden;
 z-index:0;
 opacity:.18;
 font-size:15px;
-
+line-height:25px;
 }
 
 
-
-/* pantalla */
+/* Terminal hacker */
 
 .contenedor{
-
 min-height:100vh;
 display:flex;
 align-items:center;
@@ -52,102 +49,90 @@ justify-content:center;
 padding:20px;
 position:relative;
 z-index:2;
-
 }
-
 
 
 .terminal{
 
 width:100%;
 max-width:600px;
-background:#020202;
-border:1px solid #00ff66;
+background:#050505;
+border:1px solid #9b59ff;
 padding:25px;
-box-shadow:0 0 25px #00ff66;
+box-shadow:0 0 25px #9b59ff;
 
 }
 
 
+.header{
 
-/* ventana */
-
-.top{
-
-border:1px solid #00ff66;
+border:1px solid #9b59ff;
 padding:15px;
 margin-bottom:20px;
 
 }
 
 
-
-.nombre{
+.titulo{
 
 font-size:22px;
+color:#c084ff;
 
 }
-
 
 
 .linea{
 
-color:#00ff66;
-margin-top:10px;
+margin-top:8px;
 
 }
 
 
+.texto{
+
+font-size:16px;
+line-height:1.8;
+
+}
+
 
 .barra{
 
-margin-top:15px;
-border:1px solid #00ff66;
+border:1px solid #9b59ff;
 padding:5px;
+margin:15px 0;
 
 }
 
 
 .progreso{
 
-width:100%;
 height:8px;
-background:#00ff66;
+width:100%;
+background:#9b59ff;
 
 }
-
-
-
-.texto{
-
-line-height:1.8;
-font-size:16px;
-
-}
-
 
 
 button{
 
-margin-top:20px;
-background:#000;
-color:#00ff66;
-border:1px solid #00ff66;
+background:#050505;
+color:#c084ff;
+border:1px solid #9b59ff;
 padding:12px 20px;
 font-family:monospace;
 cursor:pointer;
+margin-top:15px;
 
 }
-
 
 
 button:hover{
 
-background:#00ff66;
+background:#9b59ff;
 color:#000;
 
 }
-
 
 
 .archivo{
@@ -157,11 +142,11 @@ display:none;
 }
 
 
-
 .final{
 
 text-align:center;
 margin-top:30px;
+color:#c084ff;
 
 }
 
@@ -183,7 +168,6 @@ opacity:0;
 
 </style>
 
-
 </head>
 
 
@@ -192,15 +176,15 @@ opacity:0;
 
 <div class="matrix">
 
-010101 101010 00101
+2026 01 10 1010
 <br>
-MINDSET CORE ONLINE
+MINDSET_SYSTEM ONLINE
 <br>
-101010101
+0101 2026 1010
 <br>
-REALITY CHECK
+REALITY FILE FOUND
 <br>
-010101010
+01 10 2026
 <br>
 
 </div>
@@ -213,29 +197,27 @@ REALITY CHECK
 <div class="terminal">
 
 
+<div class="header">
 
-<div class="top">
-
-<div class="nombre">
+<div class="titulo">
 
 MINDSET_SYSTEM v2.0
 
 </div>
 
 
-<div class="linea">
+<div>
 
 ┌ SYSTEM TERMINAL ┐
 
 </div>
 
 
-<div class="linea">
+<div>
 
 STATUS: ONLINE ✓
 
 </div>
-
 
 </div>
 
@@ -264,12 +246,10 @@ STATUS: ONLINE ✓
 
 <div class="barra">
 
-[████████████] 100%
+<div class="progreso"></div>
 
 </div>
 
-
-<br>
 
 > FILE FOUND:
 
@@ -285,7 +265,8 @@ REALIDAD.txt
 
 
 
-<button onclick="abrir()">
+
+<button onclick="abrirArchivo()">
 
 [ OPEN REALITY.txt ]
 
@@ -307,29 +288,30 @@ REALIDAD.txt
 <br><br>
 
 
-A veces uno se preocupa demasiado por lo que dicen los demás,
-pero no todas las opiniones merecen nuestra energía.
+A veces uno pierde demasiado tiempo mirando lo que dicen los demás,
+cuando la verdadera competencia siempre ha sido con uno mismo.
 
 <br><br>
 
-La envidia, las críticas y las malas vibras siempre van a existir,
-pero uno decide cuánto poder les da sobre su vida.
+No todo comentario merece una respuesta.
+Hay personas que intentan apagar lo que otros hacen porque no soportan
+ver a alguien avanzar.
 
 <br><br>
 
-No necesitas llamar la atención para demostrar quién eres.
-Ser original, pensar diferente y mantener tu esencia vale mucho más
-que intentar agradarle a todo el mundo.
+No necesitas llamar la atención para demostrar tu valor.
+Ser diferente, tener tu propia forma de pensar y mantener tu esencia
+vale más que intentar encajar para agradar a todos.
 
 <br><br>
 
-Las personas pueden hablar, pueden juzgar o pueden dudar,
-pero al final tus acciones son las que muestran realmente quién eres.
+La envidia y las malas vibras siempre van a existir,
+pero tú decides si les das poder o sigues avanzando hacia tus metas.
 
 <br><br>
 
-Sigue avanzando sin perder tu forma de ser.
-Mejora, aprende y deja que tus resultados hablen por ti.
+No cambies quién eres por la opinión de alguien más.
+Mejora, aprende y sigue creciendo sin perder tu esencia.
 
 <br><br>
 
@@ -342,15 +324,11 @@ Mejora, aprende y deja que tus resultados hablen por ti.
 
 KEEP YOUR MIND STRONG 🖤
 
-</div>
+<br><br>
 
-
-
-</div>
-
+2026
 
 </div>
-
 
 
 </div>
@@ -359,19 +337,19 @@ KEEP YOUR MIND STRONG 🖤
 </div>
 
 
+</div>
 
 
 <script>
 
 
-function abrir(){
+function abrirArchivo(){
 
 document.querySelector("button").style.display="none";
 
 document.getElementById("archivo").style.display="block";
 
 }
-
 
 
 
@@ -382,37 +360,30 @@ const simbolos=[
 "2026",
 "20",
 "26",
-"█",
+"404",
 ">",
-"_",
-"404"
+"_"
 
 ];
 
 
 for(let i=0;i<60;i++){
 
+let s=document.createElement("div");
 
-let elemento=document.createElement("div");
+s.innerHTML=simbolos[Math.floor(Math.random()*simbolos.length)];
 
+s.style.position="fixed";
+s.style.top="-30px";
+s.style.left=Math.random()*100+"vw";
+s.style.color="#9b59ff";
+s.style.fontSize=(12+Math.random()*20)+"px";
+s.style.zIndex="1";
 
-elemento.innerHTML=
-simbolos[Math.floor(Math.random()*simbolos.length)];
-
-
-elemento.style.position="fixed";
-elemento.style.top="-30px";
-elemento.style.left=Math.random()*100+"vw";
-elemento.style.color="#00ff66";
-elemento.style.fontSize=(12+Math.random()*20)+"px";
-elemento.style.zIndex="1";
+document.body.appendChild(s);
 
 
-document.body.appendChild(elemento);
-
-
-
-elemento.animate(
+s.animate(
 
 [
 {
@@ -435,9 +406,7 @@ delay:Math.random()*5000
 
 );
 
-
 }
-
 
 </script>
 
