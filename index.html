@@ -23,7 +23,7 @@ overflow-x:hidden;
 }
 
 
-/* Código cayendo */
+/* lluvia hacker */
 
 .matrix{
 position:fixed;
@@ -39,7 +39,7 @@ line-height:25px;
 }
 
 
-/* Terminal hacker */
+/* terminal */
 
 .contenedor{
 min-height:100vh;
@@ -77,13 +77,6 @@ margin-bottom:20px;
 
 font-size:22px;
 color:#c084ff;
-
-}
-
-
-.linea{
-
-margin-top:8px;
 
 }
 
@@ -176,16 +169,17 @@ opacity:0;
 
 <div class="matrix">
 
-2026 01 10 1010
+01 08 2026
 <br>
 MINDSET_SYSTEM ONLINE
 <br>
-0101 2026 1010
+AGOSTO 2026
+<br>
+010101 01 08 2026
 <br>
 REALITY FILE FOUND
 <br>
-01 10 2026
-<br>
+01 08 2026
 
 </div>
 
@@ -198,6 +192,7 @@ REALITY FILE FOUND
 
 
 <div class="header">
+
 
 <div class="titulo">
 
@@ -218,6 +213,7 @@ MINDSET_SYSTEM v2.0
 STATUS: ONLINE ✓
 
 </div>
+
 
 </div>
 
@@ -249,6 +245,15 @@ STATUS: ONLINE ✓
 <div class="progreso"></div>
 
 </div>
+
+
+> DATE FILE:
+
+<br>
+
+01 / 08 / 2026
+
+<br><br>
 
 
 > FILE FOUND:
@@ -326,7 +331,7 @@ KEEP YOUR MIND STRONG 🖤
 
 <br><br>
 
-2026
+01 • 08 • 2026
 
 </div>
 
@@ -338,6 +343,8 @@ KEEP YOUR MIND STRONG 🖤
 
 
 </div>
+
+
 
 
 <script>
@@ -353,13 +360,14 @@ document.getElementById("archivo").style.display="block";
 
 
 
+
 const simbolos=[
 
 "01",
-"10",
+"08",
 "2026",
-"20",
-"26",
+"01 08 2026",
+"AGOSTO",
 "404",
 ">",
 "_"
@@ -369,9 +377,13 @@ const simbolos=[
 
 for(let i=0;i<60;i++){
 
+
 let s=document.createElement("div");
 
-s.innerHTML=simbolos[Math.floor(Math.random()*simbolos.length)];
+
+s.innerHTML=
+simbolos[Math.floor(Math.random()*simbolos.length)];
+
 
 s.style.position="fixed";
 s.style.top="-30px";
@@ -380,7 +392,9 @@ s.style.color="#9b59ff";
 s.style.fontSize=(12+Math.random()*20)+"px";
 s.style.zIndex="1";
 
+
 document.body.appendChild(s);
+
 
 
 s.animate(
@@ -406,7 +420,9 @@ delay:Math.random()*5000
 
 );
 
+
 }
+
 
 </script>
 
